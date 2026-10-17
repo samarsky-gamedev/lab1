@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Университет">
+    <mxGraphModel page="1" pageWidth="1040" pageHeight="900">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Person" value="Person&#10;+ name: str&#10;+ __init__(name)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="30" width="310" height="130" />
+        </mxCell>
+        <mxCell id="Student" value="Student&#10;+ group: str&#10;+ __init__(name, group)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="230" width="310" height="130" />
+        </mxCell>
+        <mxCell id="Teacher" value="Teacher&#10;+ department: str&#10;+ __init__(name, department)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="230" width="310" height="130" />
+        </mxCell>
+        <mxCell id="Course" value="Course&#10;+ name: str&#10;+ hours: int&#10;+ teacher_id: int&#10;+ __init__(name, hours, teacher_id)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="460" width="310" height="165" />
+        </mxCell>
+        <mxCell id="University" value="University&#10;- _records: dict&#10;+ add(kind, record_id, item)&#10;+ get(kind, record_id)&#10;+ list_records(kind)&#10;+ update(kind, record_id, item)&#10;+ delete(kind, record_id)" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="460" width="470" height="210" />
+        </mxCell>
+        <mxCell id="Student_Person" value="" edge="1" parent="1" source="Student" target="Person" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;endFill=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="Teacher_Person" value="" edge="1" parent="1" source="Teacher" target="Person" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;endFill=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="University_Student" value="1 : 0..*" edge="1" parent="1" source="University" target="Student" style="edgeStyle=orthogonalEdgeStyle;html=0;startArrow=diamond;startFill=1;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="University_Teacher" value="1 : 0..*" edge="1" parent="1" source="University" target="Teacher" style="edgeStyle=orthogonalEdgeStyle;html=0;startArrow=diamond;startFill=1;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="University_Course" value="1 : 0..*" edge="1" parent="1" source="University" target="Course" style="edgeStyle=orthogonalEdgeStyle;html=0;startArrow=diamond;startFill=1;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="Course_Teacher" value="0..* : 1" edge="1" parent="1" source="Course" target="Teacher" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=open;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
