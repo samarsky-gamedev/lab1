@@ -14,11 +14,14 @@
         <mxCell id="Teacher" value="Teacher&#10;+ department: str&#10;+ __init__(name, department)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="670" y="230" width="310" height="130" />
         </mxCell>
-        <mxCell id="Course" value="Course&#10;+ name: str&#10;+ hours: int&#10;+ teacher_id: int&#10;+ __init__(name, hours, teacher_id)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="670" y="460" width="310" height="165" />
+        <mxCell id="Course" value="Course&#10;+ name: str&#10;+ hours: int&#10;+ teacher_id: int&#10;+ __init__(...)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="460" width="310" height="185" />
         </mxCell>
         <mxCell id="University" value="University&#10;- _records: dict&#10;+ add(kind, record_id, item)&#10;+ get(kind, record_id)&#10;+ list_records(kind)&#10;+ update(kind, record_id, item)&#10;+ delete(kind, record_id)" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="30" y="460" width="470" height="210" />
+        </mxCell>
+        <mxCell id="UniversityError" value="UniversityError&#10;Exception&#10;Ошибки правил университета" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="730" width="310" height="95" />
         </mxCell>
         <mxCell id="Student_Person" value="" edge="1" parent="1" source="Student" target="Person" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=block;endFill=0;">
           <mxGeometry as="geometry" relative="1" />
@@ -36,6 +39,9 @@
           <mxGeometry as="geometry" relative="1" />
         </mxCell>
         <mxCell id="Course_Teacher" value="0..* : 1" edge="1" parent="1" source="Course" target="Teacher" style="edgeStyle=orthogonalEdgeStyle;html=0;endArrow=open;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="University_UniversityError" value="raises" edge="1" parent="1" source="University" target="UniversityError" style="edgeStyle=orthogonalEdgeStyle;html=0;dashed=1;endArrow=open;">
           <mxGeometry as="geometry" relative="1" />
         </mxCell>
       </root>
