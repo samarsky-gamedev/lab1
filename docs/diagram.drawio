@@ -5,7 +5,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Person" value="Person&#10;+ name: str&#10;+ __init__(name)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+        <mxCell id="Person" value="Person&#10;+ name: str&#10;+ __init__(name)" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="350" y="30" width="310" height="130" />
         </mxCell>
         <mxCell id="Student" value="Student&#10;+ group: str&#10;+ __init__(name, group)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
@@ -17,8 +17,8 @@
         <mxCell id="Course" value="Course&#10;+ name: str&#10;+ hours: int&#10;+ teacher_id: int&#10;+ __init__(...)&#10;+ __str__(): str" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="670" y="460" width="310" height="185" />
         </mxCell>
-        <mxCell id="University" value="University&#10;- _records: dict&#10;+ add(kind, record_id, item)&#10;+ get(kind, record_id)&#10;+ list_records(kind)&#10;+ update(kind, record_id, item)&#10;+ delete(kind, record_id)" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="30" y="460" width="470" height="210" />
+        <mxCell id="University" value="University&#10;- _records: dict&#10;+ put(kind, record_id, item,&#10;        replace=False)&#10;+ get(kind, record_id)&#10;+ list_records(kind)&#10;+ delete(kind, record_id)&#10;+ save(path)&#10;+ load(path)" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="460" width="470" height="270" />
         </mxCell>
         <mxCell id="UniversityError" value="UniversityError&#10;Exception&#10;Ошибки правил университета" style="rounded=0;whiteSpace=wrap;html=0;align=left;spacing=12;fontSize=16;fillColor=#ffffff;strokeColor=#222222;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="670" y="730" width="310" height="95" />
